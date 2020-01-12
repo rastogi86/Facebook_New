@@ -1,6 +1,5 @@
 package facebook.Tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,10 +21,12 @@ public class FacebookLogin extends FacebookLoginPageProperties
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(imgfacebookGotoHomeImage));
 		driver.findElement(txtEnterPost).click();
-		driver.findElement(By.xpath("//div[contains(@aria-label,'on your mind')]")).sendKeys(post);
-		driver.findElement(By.xpath("//button[@data-testid='react-composer-post-button' and @type='submit']")).click();
-		Thread.sleep(4000);
+		driver.findElement(txtPostWindow).sendKeys(post);
+		driver.findElement(btnPostWindow).click();
+		Thread.sleep(3000);
 		TestBase.TakesScreenshot();
+		
+		//p[contains(text(),'WhatIsThis')]
 
 	}
 	}

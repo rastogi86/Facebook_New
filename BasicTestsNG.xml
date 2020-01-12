@@ -14,9 +14,5 @@
 		</classes>
 	</test> <!-- Test -->
 
-	<test thread-count="5" name="Executing Login test">
-		<classes>
-			<class name="facebook.Tests.FacebookLogin" />
-		</classes>
-	</test> <!-- Test -->
+	
 </suite> <!-- Suite -->
