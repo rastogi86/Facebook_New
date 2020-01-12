@@ -1,78 +1,47 @@
 package facebook.main;
 
-import facebook.Tests.FacebookLogin;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
+import facebook.Tests.FacebookLogin;
 
 public class TestBase extends FacebookLogin {
 	public static WebDriver driver;
-
-	@Parameters("browser")
+	public ExtentHtmlReporter htmlReporter;
+	public ExtentReports extent;
+	public ExtentTest test;
+	
+	@Parameters({"browser"})
 	@BeforeTest
-	public void setUp(@Optional("") String browser) {
-		browser = browser.toLowerCase();
-
-		switch (browser) {
-		case "chrome":
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			String[] arguments = {"incognito", "start-maximized", "disable-infobars","disable-extensions"};
-			options.addArguments(arguments);
-			driver = new ChromeDriver(options);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			break;
-			
-		/*SetChromeOptions sct=new SetChromeOptions(); sct.SetChromeOptions(options);
-			options.addArguments("incognito");
-			options.addArguments("start-maximized");
-			options.addArguments("window-size=1680,1050");
-			options.addArguments("disable-infobars");
-			options.addArguments("disable-extensions");*/
+	public void setUp(@Optional("") String browser) 
+	{
+		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+".//results/ExtentReport.html");
+		htmlReporter.config().setEncoding("UTF-8");
+		htmlReporter.config().setDocumentTitle("Facebook tests");
+		htmlReporter.config().setReportName("Creating a post");
+		htmlReporter.config().setTheme(Theme.DARK);
+		extent =new ExtentReports();
+		extent.attachReporter(htmlReporter);
 		
-			
-
-		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-			break;
-		}
+		browser = browser.toLowerCase();
+		driver=initializeDriver(driver,browser);
+		
 	}
-
-	public static String newFileNameEverytime() 
-	{
-		Date d = new Date();
-		String filename = d.toString().replace(":", "_").replace(" ", "_");
-		return filename;
-	}
-
-	public static void TakesScreenshot() throws IOException 
-	{
-		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file,
-				new File(System.getProperty("user.dir") + "\\screenshot\\" + newFileNameEverytime() + ".jpeg"));
-	}
-
+		
 	@Parameters({ "url", "userID", "password" })
 	@Test(retryAnalyzer = facebook.Utils.RetryAnalyzer.class)
 	public void RunTests(@Optional("") String url, @Optional("") String userID, @Optional("") String password) throws Exception 
 	{
-		Login(driver, url, userID, password);
+		Login(driver, url, userID, password,test);
 		CreatePost(driver, "New post :: @" + newFileNameEverytime());
 	}
 
@@ -80,5 +49,6 @@ public class TestBase extends FacebookLogin {
 	public void tearDown() 
 	{
 		driver.quit();
+		extent.flush();
 	}
 }
