@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -147,12 +147,19 @@
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;userID&quot; value=&quot;sumeetautomates@gmail.com&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.facebook.com/&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;facebook.Utils.ListenerClass&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Executing Base test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;facebook.main.TestBase&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Executing Base test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Executing Login test&quot;&gt;
+    &lt;classes&gt;
       &lt;class name=&quot;facebook.Tests.FacebookLogin&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Executing Login test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +171,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Executing Base test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Executing Login test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,12 +204,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'RunTests')
 data.setCell(0, 2, 'facebook.main.TestBase')
-data.setCell(0, 3, 19817);
+data.setCell(0, 3, 14992);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -232,11 +242,11 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)</span>
-                <span class="method-start">3254 ms</span>
+                <span class="method-start">3224 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23080 ms</span>
+                <span class="method-start">18221 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

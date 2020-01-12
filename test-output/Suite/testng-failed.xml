@@ -5,7 +5,7 @@
   <parameter name="browser" value="chrome"/>
   <parameter name="userID" value="sumeetautomates@gmail.com"/>
   <parameter name="url" value="https://www.facebook.com/"/>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="LoginTest(failed)">
     <classes>
       <class name="facebook.main.TestBase">
         <methods>
@@ -15,5 +15,5 @@
         </methods>
       </class> <!-- facebook.main.TestBase -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

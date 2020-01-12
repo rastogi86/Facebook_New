@@ -5,10 +5,17 @@
 	<parameter name="url" value="https://www.facebook.com/"></parameter>
 	<parameter name="userID" value="sumeetautomates@gmail.com"></parameter>
 	<parameter name="password" value="automation123"></parameter>
-
-	<test thread-count="5" name="Test">
+	<listeners>
+		<listener class-name="facebook.Utils.ListenerClass" />
+	</listeners>
+	<test thread-count="5" name="Executing Base test">
 		<classes>
 			<class name="facebook.main.TestBase" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Executing Login test">
+		<classes>
 			<class name="facebook.Tests.FacebookLogin" />
 		</classes>
 	</test> <!-- Test -->

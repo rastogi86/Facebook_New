@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23825" started-at="2020-01-11T11:15:31 PST" finished-at="2020-01-11T11:15:55 PST">
+  <suite name="Suite" duration-ms="18875" started-at="2020-01-11T20:40:07 PST" finished-at="2020-01-11T20:40:25 PST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="23825" started-at="2020-01-11T11:15:31 PST" finished-at="2020-01-11T11:15:55 PST">
+    <test name="Executing Base test" duration-ms="18850" started-at="2020-01-11T20:40:07 PST" finished-at="2020-01-11T20:40:25 PST">
       <class name="facebook.main.TestBase">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:facebook.main.TestBase@6c49835d]" name="setUp" is-config="true" duration-ms="3220" started-at="2020-01-11T11:15:31 PST" finished-at="2020-01-11T11:15:34 PST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:facebook.main.TestBase@4e7dc304]" name="setUp" is-config="true" duration-ms="3205" started-at="2020-01-11T20:40:07 PST" finished-at="2020-01-11T20:40:10 PST">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RunTests(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:facebook.main.TestBase@6c49835d]" name="RunTests" duration-ms="19817" started-at="2020-01-11T11:15:34 PST" finished-at="2020-01-11T11:15:54 PST">
+        <test-method status="PASS" signature="RunTests(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:facebook.main.TestBase@4e7dc304]" name="RunTests" duration-ms="14992" started-at="2020-01-11T20:40:10 PST" finished-at="2020-01-11T20:40:25 PST">
           <params>
             <param index="0">
               <value>
@@ -39,11 +39,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RunTests -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:facebook.main.TestBase@6c49835d]" name="tearDown" is-config="true" duration-ms="739" started-at="2020-01-11T11:15:54 PST" finished-at="2020-01-11T11:15:55 PST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:facebook.main.TestBase@4e7dc304]" name="tearDown" is-config="true" duration-ms="624" started-at="2020-01-11T20:40:25 PST" finished-at="2020-01-11T20:40:25 PST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- facebook.main.TestBase -->
-    </test> <!-- Test -->
+    </test> <!-- Executing Base test -->
+    <test name="Executing Login test" duration-ms="1" started-at="2020-01-11T20:40:25 PST" finished-at="2020-01-11T20:40:25 PST">
+    </test> <!-- Executing Login test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -1,10 +1,11 @@
 package facebook.main;
 
+import facebook.Tests.FacebookLogin;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,14 +18,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import facebook.Tests.FacebookLogin;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestBase {
-	public volatile static WebDriver driver;
+public class TestBase extends FacebookLogin {
+	public static WebDriver driver;
 
-	
 	@Parameters("browser")
 	@BeforeTest
 	public void setUp(@Optional("") String browser) {
@@ -39,10 +37,9 @@ public class TestBase {
 			 */
 			options.addArguments("incognito");
 			options.addArguments("start-maximized");
-			options.addArguments("window-size=1680,1050");
+		  //options.addArguments("window-size=1680,1050");
 			options.addArguments("disable-infobars");
 			options.addArguments("disable-extensions");
-			options.addArguments("--start-maximized");
 			driver = new ChromeDriver(options);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			break;
@@ -54,22 +51,24 @@ public class TestBase {
 		}
 	}
 
-	public static String newFileNameEverytime()
-	{
-		Date d=new Date();
-		String filename=d.toString().replace(":", "_").replace(" ", "_");
+	public static String newFileNameEverytime() {
+		Date d = new Date();
+		String filename = d.toString().replace(":", "_").replace(" ", "_");
 		return filename;
 	}
-	public static void TakesScreenshot() throws IOException
-	{
-		File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"\\screenshot\\"+newFileNameEverytime()+".jpeg"));
+
+	public static void TakesScreenshot() throws IOException {
+		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file,
+				new File(System.getProperty("user.dir") + "\\screenshot\\" + newFileNameEverytime() + ".jpeg"));
 	}
+
 	@Parameters({ "url", "userID", "password" })
 	@Test
-	public void RunTests(String url, String userID, String password) throws IOException, InterruptedException {
-		FacebookLogin fbl = new FacebookLogin();
-		fbl.Login(driver, url, userID, password);
+	public void RunTests(@Optional("") String url, @Optional("") String userID, @Optional("") String password)
+			throws Exception {
+		Login(driver, url, userID, password);
+		CreatePost(driver, "New post :: @" + newFileNameEverytime());
 	}
 
 	@AfterTest
