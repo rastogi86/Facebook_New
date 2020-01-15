@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="facebook.main.TestBase" hash-for-method="RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)">RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.facebook.main.TestBase" hash-for-method="RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)">RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,7 +120,7 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">facebook.main.TestBase</span>
+              <span class="class-name">com.automation.facebook.main.TestBase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -144,17 +144,17 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;facebook.Utils.ListenerClass&quot;/&gt;
+    &lt;listener class-name=&quot;com.automation.facebook.Utils.ListenerClass&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Executing Base test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login to Facebook&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;automation123&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;userID&quot; value=&quot;sumeetautomates@gmail.com&quot;/&gt;
     &lt;parameter name=&quot;url&quot; value=&quot;https://www.facebook.com/&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;facebook.main.TestBase&quot;/&gt;
+      &lt;class name=&quot;com.automation.facebook.main.TestBase&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Executing Base test --&gt;
+  &lt;/test&gt; &lt;!-- Login to Facebook --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,7 +166,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Executing Base test (1 class)</span>
+                <span class="test-name">Login to Facebook (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -195,13 +195,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'RunTests')
-data.setCell(0, 2, 'facebook.main.TestBase')
-data.setCell(0, 3, 14042);
+data.setCell(0, 2, 'com.automation.facebook.main.TestBase')
+data.setCell(0, 3, 37308);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 37 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -227,18 +227,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">facebook.main.TestBase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.facebook.main.TestBase</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)</span>
-                <span class="method-start">3010 ms</span>
+                <span class="method-start">3398 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17067 ms</span>
+                <span class="method-start">40712 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

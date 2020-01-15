@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="facebook.Utils.ListenerClass"/>
   </listeners>
-  <test thread-count="5" name="Executing Base test(failed)">
+  <test thread-count="5" name="Login to Facebook(failed)">
     <parameter name="password" value="automation123"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="userID" value="sumeetautomates@gmail.com"/>
@@ -12,11 +12,11 @@
     <classes>
       <class name="facebook.main.TestBase">
         <methods>
-          <include name="RunTests"/>
+          <include name="RunTests" invocation-numbers="0 0 0 0"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- facebook.main.TestBase -->
     </classes>
-  </test> <!-- Executing Base test(failed) -->
+  </test> <!-- Login to Facebook(failed) -->
 </suite> <!-- Failed suite [Suite] -->

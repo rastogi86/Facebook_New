@@ -3,6 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="facebook.Tests.CreatePost">
+        <methods>
+          <include name="CreateNewPost"/>
+        </methods>
+      </class> <!-- facebook.Tests.CreatePost -->
       <class name="facebook.main.TestBase">
         <methods>
           <include name="RunTests"/>

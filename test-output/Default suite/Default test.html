@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 12 12:53:50 PST 2020</td>
+<td>Started on:</td><td>Tue Jan 14 23:24:36 PST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (59 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (77 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,22 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='facebook.main.TestBase.setUp()'><b>setUp</b><br>Test class: facebook.main.TestBase</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-in C:\Users\rasto\AppData\Local\Temp\testng-eclipse--2048947362\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+<td title='facebook.main.TestBase.setUp()'><b>setUp</b><br>Test class: facebook.main.TestBase<br>Parameters: </td>
+<td><div><pre>java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:888)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:102)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:71)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at facebook.common.CommonMethods.initializeDriver(CommonMethods.java:40)
+	at facebook.main.TestBase.setUp(TestBase.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
 	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:613)
 	at org.testng.TestRunner.run(TestRunner.java:584)
@@ -100,90 +107,22 @@ in C:\Users\rasto\AppData\Local\Temp\testng-eclipse--2048947362\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1233705144", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1233705144'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-in C:\Users\rasto\AppData\Local\Temp\testng-eclipse--2048947362\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:613)
-	at org.testng.TestRunner.run(TestRunner.java:584)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>-1578862430</td>
-<td>facebook.main.TestBase@38425407</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='facebook.main.TestBase.tearDown()'><b>tearDown</b><br>Test class: facebook.main.TestBase</td>
-<td></td>
-<td>-1578862430</td>
-<td>facebook.main.TestBase@38425407</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='facebook.main.TestBase.RunTests()'><b>RunTests</b><br>Test class: facebook.main.TestBase</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-in C:\Users\rasto\AppData\Local\Temp\testng-eclipse--2048947362\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:613)
-	at org.testng.TestRunner.run(TestRunner.java:584)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2123444693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2123444693'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method setUp but has not been marked @Optional or defined
-in C:\Users\rasto\AppData\Local\Temp\testng-eclipse--2048947362\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:289)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:377)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:721)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2109874862", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2109874862'><pre>java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:888)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:102)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:71)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at facebook.common.CommonMethods.initializeDriver(CommonMethods.java:40)
+	at facebook.main.TestBase.setUp(TestBase.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
 	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:613)
 	at org.testng.TestRunner.run(TestRunner.java:584)
@@ -202,7 +141,170 @@ in C:\Users\rasto\AppData\Local\Temp\testng-eclipse--2048947362\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>facebook.main.TestBase@38425407</td></tr>
+<td>facebook.main.TestBase@27808f31</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='facebook.main.TestBase.tearDown()'><b>tearDown</b><br>Test class: facebook.main.TestBase</td>
+<td></td>
+<td>-1579073076</td>
+<td>facebook.main.TestBase@27808f31</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='facebook.Tests.CreatePost.CreateNewPost()'><b>CreateNewPost</b><br>Test class: facebook.Tests.CreatePost</td>
+<td><div><pre>org.testng.TestNGException: 
+Cannot inject @Test annotated Method [CreateNewPost] with [interface org.openqa.selenium.WebDriver, class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:895)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:762)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:60)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:39)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:771)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1176735295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1176735295'><pre>org.testng.TestNGException: 
+Cannot inject @Test annotated Method [CreateNewPost] with [interface org.openqa.selenium.WebDriver, class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:895)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:762)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:60)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:39)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:771)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>facebook.Tests.CreatePost@436e852b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='facebook.main.TestBase.RunTests()'><b>RunTests</b><br>Test class: facebook.main.TestBase</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:888)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:102)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:71)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at facebook.common.CommonMethods.initializeDriver(CommonMethods.java:40)
+	at facebook.main.TestBase.setUp(TestBase.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+	at org.testng.TestRunner.run(TestRunner.java:584)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1073533248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1073533248'><pre>java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:888)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:102)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:71)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at facebook.common.CommonMethods.initializeDriver(CommonMethods.java:40)
+	at facebook.main.TestBase.setUp(TestBase.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+	at org.testng.TestRunner.run(TestRunner.java:584)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>facebook.main.TestBase@27808f31</td></tr>
 </table><p>
 </body>
 </html>
