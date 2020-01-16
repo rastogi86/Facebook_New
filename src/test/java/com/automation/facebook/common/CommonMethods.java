@@ -6,12 +6,14 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -53,14 +55,14 @@ public class CommonMethods {
 
 	}
 
-	/*
-	 * public static boolean waitandclick(WebDriverWait wait, WebDriver driver, By
-	 * locator) {
-	 * 
-	 * if (wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).
-	 * isDisplayed()) { driver.findElement(locator).click(); return true; } else
-	 * return false;
-	 * 
-	 * }
-	 */
+	public static boolean waitandclick(WebDriverWait wait, WebDriver driver, By locator) {
+
+		if (wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed()) {
+			driver.findElement(locator).click();
+			return true;
+		} else
+			return false;
+
+	}
+
 }
