@@ -11,7 +11,7 @@ public class VerifyPost {
 	
 	public void VerifyPosts(WebDriver driver) throws InterruptedException {
 		List<WebElement> elelist=new ArrayList<WebElement>();
-		By actualPosts = By.xpath("//div[@id='stream_pagelet']//p");
+		By actualPosts = By.xpath("//div[@data-testid='post_message']//p");
 		elelist = driver.findElements(actualPosts);
 		
 		String[] list=new String[elelist.size()];

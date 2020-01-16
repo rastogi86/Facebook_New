@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41757" started-at="2020-01-15T11:38:36 PST" finished-at="2020-01-15T11:39:18 PST">
+  <suite name="Suite" duration-ms="43292" started-at="2020-01-16T01:17:33 PST" finished-at="2020-01-16T01:18:16 PST">
     <groups>
     </groups>
-    <test name="Login to Facebook" duration-ms="41757" started-at="2020-01-15T11:38:36 PST" finished-at="2020-01-15T11:39:18 PST">
+    <test name="Login to Facebook" duration-ms="43292" started-at="2020-01-16T01:17:33 PST" finished-at="2020-01-16T01:18:16 PST">
       <class name="com.automation.facebook.main.TestBase">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@184f6be2]" name="setUp" is-config="true" duration-ms="3382" started-at="2020-01-15T11:38:36 PST" finished-at="2020-01-15T11:38:40 PST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@394e1a0f]" name="setUp" is-config="true" duration-ms="3261" started-at="2020-01-16T01:17:33 PST" finished-at="2020-01-16T01:17:36 PST">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RunTests(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@184f6be2]" name="RunTests" duration-ms="37308" started-at="2020-01-15T11:38:40 PST" finished-at="2020-01-15T11:39:17 PST">
+        <test-method status="PASS" signature="RunTests(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@394e1a0f]" name="RunTests" duration-ms="38921" started-at="2020-01-16T01:17:36 PST" finished-at="2020-01-16T01:18:15 PST">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RunTests -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.facebook.main.TestBase@184f6be2]" name="tearDown" is-config="true" duration-ms="1041" started-at="2020-01-15T11:39:17 PST" finished-at="2020-01-15T11:39:18 PST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.facebook.main.TestBase@394e1a0f]" name="tearDown" is-config="true" duration-ms="1080" started-at="2020-01-16T01:18:15 PST" finished-at="2020-01-16T01:18:16 PST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
