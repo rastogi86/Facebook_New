@@ -3,6 +3,8 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="com.automation.facebook.Utils.ListenerClass" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
 	</listeners>
 	<test thread-count="5" name="Login to Facebook">
 		<parameter name="browser" value="chrome"></parameter>

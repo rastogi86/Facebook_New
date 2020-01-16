@@ -15,12 +15,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonMethods {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
+
 
 	public static WebDriver initializeDriver(WebDriver driver, String browser) {
 		if (browser.equals("chrome")) {
@@ -48,11 +50,20 @@ public class CommonMethods {
 	}
 
 	public static void screenshot(WebDriver driver) throws IOException {
-
-		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file,
-				new File(System.getProperty("user.dir") + "\\screenshot\\" + newFileNameEverytime() + ".jpeg"));
-
+		System.setProperty("org.uncommons.reportng.escape-output","false"); //adding this statement to see screenshot links in html output report 
+		File sourcefile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String uniqueFileName=newFileNameEverytime();
+		String destinationfile=System.getProperty("user.dir") + "\\screenshot\\" + uniqueFileName + ".jpeg";
+		
+		
+		
+		FileUtils.copyFile(sourcefile,new File(destinationfile));
+		Reporter.log("<a target=\"_blank\"  href="+destinationfile+"> New post created</a>");
+		
+		Reporter.log("<a height =50 target=\"_blank\"  href="+destinationfile+"> <img height =200 width=200 src="+destinationfile+"</img></a>");
+		
+		
+		
 	}
 
 	public static boolean waitandclick(WebDriverWait wait, WebDriver driver, By locator) {
