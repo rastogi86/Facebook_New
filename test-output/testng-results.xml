@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[<a target="_blank"  href=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg> New post created</a>]]>
+    </line>
+    <line>
+      <![CDATA[<a height =50 target="_blank"  href=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg> <img height =200 width=200 src=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg</img></a>]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="43292" started-at="2020-01-16T01:17:33 PST" finished-at="2020-01-16T01:18:16 PST">
+  <suite name="Suite" duration-ms="21483" started-at="2020-01-20T23:34:44 PST" finished-at="2020-01-20T23:35:05 PST">
     <groups>
     </groups>
-    <test name="Login to Facebook" duration-ms="43292" started-at="2020-01-16T01:17:33 PST" finished-at="2020-01-16T01:18:16 PST">
+    <test name="Login to Facebook" duration-ms="21483" started-at="2020-01-20T23:34:44 PST" finished-at="2020-01-20T23:35:05 PST">
       <class name="com.automation.facebook.main.TestBase">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@394e1a0f]" name="setUp" is-config="true" duration-ms="3261" started-at="2020-01-16T01:17:33 PST" finished-at="2020-01-16T01:17:36 PST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@1b083826]" name="setUp" is-config="true" duration-ms="2901" started-at="2020-01-20T23:34:44 PST" finished-at="2020-01-20T23:34:47 PST">
           <params>
             <param index="0">
               <value>
@@ -18,7 +24,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RunTests(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@394e1a0f]" name="RunTests" duration-ms="38921" started-at="2020-01-16T01:17:36 PST" finished-at="2020-01-16T01:18:15 PST">
+        <test-method status="PASS" signature="RunTests(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.automation.facebook.main.TestBase@1b083826]" name="RunTests" duration-ms="17469" started-at="2020-01-20T23:34:47 PST" finished-at="2020-01-20T23:35:04 PST">
           <params>
             <param index="0">
               <value>
@@ -37,9 +43,15 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[<a target="_blank"  href=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg> New post created</a>]]>
+            </line>
+            <line>
+              <![CDATA[<a height =50 target="_blank"  href=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg> <img height =200 width=200 src=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg</img></a>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- RunTests -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.facebook.main.TestBase@394e1a0f]" name="tearDown" is-config="true" duration-ms="1080" started-at="2020-01-16T01:18:15 PST" finished-at="2020-01-16T01:18:16 PST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.facebook.main.TestBase@1b083826]" name="tearDown" is-config="true" duration-ms="876" started-at="2020-01-20T23:35:04 PST" finished-at="2020-01-20T23:35:05 PST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

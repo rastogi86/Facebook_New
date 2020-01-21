@@ -145,6 +145,8 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.automation.facebook.Utils.ListenerClass&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Login to Facebook&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;automation123&quot;/&gt;
@@ -196,12 +198,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'RunTests')
 data.setCell(0, 2, 'com.automation.facebook.main.TestBase')
-data.setCell(0, 3, 38921);
+data.setCell(0, 3, 17469);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -212,6 +214,13 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><a target="_blank"  href=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg> New post created</a></span>
+                <span class="reporter-method-output"><a height =50 target="_blank"  href=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg> <img height =200 width=200 src=C:\Users\rasto\eclipse-workspace\Facebook_New\screenshot\Mon_Jan_20_23_34_58_PST_2020.jpeg</img></a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -234,11 +243,11 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">RunTests(https://www.facebook.com/, sumeetautomates@gmail.com, automation123)</span>
-                <span class="method-start">3275 ms</span>
+                <span class="method-start">2915 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42207 ms</span>
+                <span class="method-start">20421 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

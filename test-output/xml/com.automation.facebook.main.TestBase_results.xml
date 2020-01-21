@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="30.226">
+           time="17.469">
   <properties />
   
   
-            <testcase name="RunTests" time="30.226" classname="com.automation.facebook.main.TestBase" />
+            <testcase name="RunTests" time="17.469" classname="com.automation.facebook.main.TestBase" />
       
 </testsuite>

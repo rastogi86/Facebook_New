@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="facebook.Utils.ListenerClass"/>
-  </listeners>
-  <test thread-count="5" name="Login to Facebook(failed)">
-    <parameter name="password" value="automation123"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="userID" value="sumeetautomates@gmail.com"/>
-    <parameter name="url" value="https://www.facebook.com/"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="facebook.main.TestBase">
+      <class name="com.automation.facebook.main.TestBase">
         <methods>
-          <include name="RunTests" invocation-numbers="0 0 0 0"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="RunTests"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- facebook.main.TestBase -->
+      </class> <!-- com.automation.facebook.main.TestBase -->
     </classes>
-  </test> <!-- Login to Facebook(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

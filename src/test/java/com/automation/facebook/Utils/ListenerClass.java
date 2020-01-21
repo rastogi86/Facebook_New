@@ -1,23 +1,53 @@
 package com.automation.facebook.Utils;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ListenerClass implements ITestListener
+import com.automation.facebook.common.CommonMethods;
+import com.automation.facebook.main.TestBase;
+import com.relevantcodes.extentreports.LogStatus;
+
+
+public class ListenerClass extends TestBase implements ITestListener
 {
+	public void onTestSuccess(ITestResult result) {
+		test.log(LogStatus.PASS, "This test has passed "+result.getName().toUpperCase());
+		rep.endTest(TestBase.test);
+		rep.flush();
+	}
+
+	
+	public void onTestFailure(ITestResult result) {
+		TestBase.test.log(LogStatus.FAIL, "This test has failed "+result.getName().toUpperCase());
+		try {
+			CommonMethods.screenshot(driver);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		rep.endTest(test);
+		rep.flush();
+	}
 
 	public void onStart(ITestContext context) 
 	{
-		System.out.println("Test named "+context.getName()+" has started");
+		test.log(LogStatus.INFO, context.getName()+" has started");
+		rep.endTest(test);
+		rep.flush();
 	}
 
 	public void onTestStart(ITestResult result) {
-		System.out.println("The following test has started :: "+result.getMethod().getMethodName());
+		test.log(LogStatus.INFO, "This test has started "+result.getMethod().getMethodName());
+		
 	}
 
 	public void onFinish(ITestContext context) {
-		System.out.println("The following test has completed :: "+context.getName());
+		test.log(LogStatus.INFO, "This test has passed "+context.getName());
+		rep.endTest(TestBase.test);
+		rep.flush();
 	}
 	
 
